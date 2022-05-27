@@ -40,6 +40,17 @@ void main(void) {
 		sBall.move(dx, 0);
 		sBall.move(0, dx);
 
+		//볼의 위치(좌표)
+		Vector2f b = sBall.getPosition();
+
+		//x축 충돌의 경우
+		if (b.x < 0 || b.x > 520) {
+			dx = -dx;
+		}
+		//화면 바깥쪽 테두리에 충돌하는 경우
+		if (b.y < 0 || b.y >450) {
+			dy = -dy;
+		}
 
 		app.clear();
 		app.draw(sBackground);
