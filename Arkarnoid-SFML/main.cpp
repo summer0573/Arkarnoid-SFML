@@ -46,7 +46,7 @@ void main(void) {
                 block[i].setPosition(-300, 0);
             }
         }
-        sBall.move(0, );
+        sBall.move(0,dy);
         for (int i = 0; i < n; i++) {
             if (isCollide(sBall, block[i])) {
                 dy = -dy;
